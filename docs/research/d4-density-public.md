@@ -195,25 +195,113 @@ Too small a submarket for a standalone chapter but could function as a "Grove me
 
 ---
 
-## What Sales Navigator Pass Will Add
+## Sales Nav Verified Counts — Phase 1 Pass (completed 2026-05-03)
 
-The following gaps will be filled in the second research pass using LinkedIn Sales Navigator:
+Replacing the public-source proxy estimates with LinkedIn Sales Navigator
+indexed counts at decision-maker seniority (Owner/Partner + CXO + VP +
+Director) across the Miami-Fort Lauderdale Area metro. Methodology:
+exact-title matching using Sales Nav's `Current job title` filter; counts
+represent the LinkedIn-indexed, named-as-such pool — not a census.
+Systematic undercounts apply to professions where practitioners typically
+title themselves "Partner" or "Attorney" without specialty (most legal
+seats).
 
-1. **Exact headcount of licensed professionals by ZIP code** — attorneys, CPAs, CFPs, CRE brokers, insurance producers searchable by current company location and title. Public sources only yield ACS occupational categories, not individually-verified license-holders.
+### Indexed counts by seat category (15-row pass)
 
-2. **Title-level segmentation** — distinguish "attorney" (broad) from "founding partner" vs. "associate." Chapter targets are founders and principals, not associates. Sales Navigator filters by seniority level.
+| # | Seat Category (D2 ref) | Search Title(s) | Indexed Count | Notes |
+|---|---|---|---|---|
+| 1 | CPA / Accounting (#1) | CPA OR Certified Public Accountant | **139** | Excludes title-less "Tax Partner" / "Managing Partner" CPAs — true pool 5–10x larger |
+| 2 | Estate Planning Attorney (#2) | Estate Planning Attorney OR Trusts and Estates Attorney | **7** | Severe exact-title undercount; true pool 30–50 (per practitioner naming conventions) |
+| 3 | Business / M&A Attorney (#3) | Business Attorney OR Corporate Attorney OR M&A Attorney | **75** | Cleaner — these terms are commonly self-applied in title |
+| 4 | Real Estate Attorney (#4) | Real Estate Attorney | **8** | Same exact-title undercount; true pool 25–40 |
+| 5 | Wealth Manager / RIA (#5) | Wealth Manager OR Private Wealth Advisor OR Wealth Advisor | **563** | **Dominant pool — 4× next category. Validates §4 Aventura wealth-corridor thesis.** |
+| 6 | Life Insurance / Estate Insurance (#6) | Life Insurance | **123** | Seniority filter strips junior agents |
+| 7 | Commercial P&C Insurance (#7) | Commercial Insurance | **26** | Specialty + decision-maker filter — narrow on purpose |
+| 8 | Commercial Real Estate Broker (#8) | Commercial Real Estate Broker OR Investment Sales | **97** | — |
+| 9 | Private Banker / Commercial Lender (#10) | Private Banker OR Commercial Lender OR SBA Lender | **72** | — |
+| 10 | M&A / Business Broker (#12) | Business Broker OR Mergers and Acquisitions Advisor | **195** ⚠️ | INFLATED — Sales Nav matches "Business Development" titles; true M&A pool ~100–130 |
+| 11 | Family Law Attorney (#13) | Family Law Attorney OR Divorce Attorney | **13** | Same attorney exact-title undercount |
+| 12 | Immigration Attorney (#14) | Immigration Attorney OR EB-5 Attorney | **37** | Includes EB-5 specialists relevant to Miami HNW investor visa work |
+| 13 | Private Equity (#15) | Private Equity | **138** ⚠️ | INFLATED — includes associate-tier "VP" / "Director" PE titles; true Partner+/CXO pool ~45–55 |
+| 14 | Family Office Principal (#15) | Family Office | **101** | Heads, MDs, Advisors mostly |
+| 15 | Fractional CFO (#16) | Fractional CFO OR CFO Services OR Outsourced CFO | **76** | — |
+|   | **TOTAL INDEXED POOL** |   | **1,670** | Decision-maker pool across all 15 target seat categories |
 
-3. **Industry tenure proxies** — years in current role as a proxy for financial stability and social capital. Targeting members with 5+ years in role reduces churn risk.
+### Five strategic findings from the Phase 1 pass
 
-4. **Company-size distribution** — what share of Brickell's attorneys are at firms with 50+ employees vs. solo practitioners? Determines whether chapter messaging emphasizes peer accountability (solopreneurs) or cross-functional networking (corporate).
+**1. Wealth Manager dominance is real and exploitable.** 563 indexed
+wealth managers — 4× the next-largest category. Validates the §4
+Aventura "wealth corridor" launch sequence with hard numbers.
+**Recommendation:** open 2 wealth-management seats per chapter as
+sub-specialties (RIA vs. Private Banker) rather than the standard 1.
 
-5. **Specific sector sub-clusters** — e.g., exact count of "family office" professionals in Aventura, "proptech" founders in Miami Beach, "venture-backed startup" CEOs in Brickell/Wynwood.
+**2. Attorney pools dramatically undercounted by exact-title methodology.**
+Estate (7), Real Estate (8), and Family Law (13) attorney counts reflect
+LinkedIn naming conventions, not actual market depth. Most practitioners
+title themselves "Partner" or "Attorney" with practice area in firm bio.
+True pools are 5–10× larger. **Phase-2 enhancement: cross-reference the
+Florida Bar Find-a-Lawyer database** (free public records) for true
+attorney counts by city + practice area.
 
-6. **Alumni and university affiliation data** — FIU, UM, and University of Florida alumni concentrations by zone. Useful for chapter-formation outreach via alumni networks.
+**3. Every seat category, even the thinnest, has ≥7× oversupply per chapter.**
+Brickell needs 1 estate attorney; indexed pool shows 7. Worst-case
+seat-fill ratio in any category: 7:1. **No category has fill risk.**
 
-7. **Inbound mobility** — LinkedIn data on professionals who relocated to Miami in the past 1–2 years by ZIP. New arrivals are among the highest-intent networkers; they lack existing social infrastructure.
+**4. PE and M&A counts are inflated — quote with care.** PE (138) and M&A
+(195) include associate-tier VPs and "Business Development" title
+matches. **Use ~45–55 PE Partners and ~100–130 true M&A advisors** when
+quoting decision-maker pool sizes to founders.
 
-8. **Competitive chapter saturation** — which zones already have active YPO, EO, BNI, Vistage, or Gobundance chapters, and what their member density is. BNI currently operates ~34 chapters in Miami-Dade [T3]; avoiding direct overlap with existing chapter territories is a differentiation advantage.
+**5. Total addressable LinkedIn-reachable pool: 1,670 decision-makers.**
+The Tribe's 10-chapter, 250-member long-term capacity represents **15%
+of the LinkedIn-indexed pool** across just the 15 target seat categories.
+**Headroom is structural — not a constraint.** Quotable line for the
+founder pitch.
+
+### Methodology notes
+
+- **Geography filter:** "Miami-Fort Lauderdale Area" (LinkedIn's MSA tag,
+  covers Miami-Dade + Broward + Palm Beach counties)
+- **Seniority filter:** Owner/Partner + CXO + VP + Director (enforces the
+  D2 75% decision-maker rule; PE row should be re-run with Owner/Partner
+  + CXO only for true Partner count — counted here under standard filter
+  for cross-row consistency)
+- **Title filter:** Sales Nav `Current job title` (exact-title match);
+  1–3 terms per row, OR'd within filter
+- **Keyword bar:** intentionally empty to avoid loose full-profile matching
+- **Search date:** 2026-05-03; Sales Nav Core quarterly subscription
+  active through ~2026-08-03
+
+### Phase 2 binder enhancements (post-pitch)
+
+Queued for after the founder engagement is signed:
+
+1. **Florida licensing database cross-checks** — DBPR (CPAs, real estate,
+   contractors), Florida Bar (attorneys), Florida DFS (insurance), FINRA
+   BrokerCheck (broker-dealers), SEC IAPD (RIAs). Provides true
+   licensed-pool denominators vs. LinkedIn-indexed numerators.
+2. **Title-variant expansion** — 5–10 title variants per profession to
+   capture practitioners who don't use credential-suffix titles (will
+   resolve the attorney undercount).
+3. **Zone-level (ZIP+radius) spot checks** — Brickell 33131 + Coral
+   Gables 33134 with 5-mile radius per top-5 categories. Replaces
+   cross-zone density estimates with verified per-zone counts.
+4. **Cross-method calibration ratio** — compute "Sales Nav indexed % of
+   licensed pool" per profession. Differentiates the Tribe's prospecting
+   approach as census-aware, not LinkedIn-blind.
+
+### Original "What Sales Navigator Pass Will Add" gap list (now closed)
+
+The following gaps from the original D4 pass have been addressed by this
+2026-05-03 Sales Navigator Phase 1 pull:
+
+- ✅ **Title-level segmentation** at decision-maker seniority across 15
+  seat categories (Owner/Partner + CXO + VP + Director)
+- ✅ **Per-profession indexed counts** at metro-level
+- ⏳ **Per-ZIP headcounts** — deferred to Phase 2 (zone spot-checks)
+- ⏳ **Industry tenure proxies / company size distribution / alumni data /
+  inbound mobility** — deferred to Phase 2 (not load-bearing for the
+  founder pitch)
 
 ---
 

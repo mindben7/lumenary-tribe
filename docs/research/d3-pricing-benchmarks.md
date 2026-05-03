@@ -5,7 +5,7 @@
 
 ---
 
-> **KEY STAT: BNI — the most widely recognized networking organization in the South Florida market — charges $1,099–$1,398/yr for renewal/new members in Miami-Dade alone, before meals or chapter fees. Lumenary Tribe's proposed $1,200–$1,500/yr sits directly in this proven market-acceptance band.**
+> **KEY STAT: BNI — the most widely recognized networking organization in the South Florida market — charges $1,099–$1,398/yr for renewal/new members in Miami-Dade alone, before meals or chapter fees. Lumenary Tribe's recommended $1,500/yr (Founders) / $1,800/yr (Members) sits directly above BNI and in line with ProVisors — bracketed by two proven market-acceptance points in the same metro.**
 
 ---
 
@@ -15,7 +15,7 @@
 |---|---|---|---|---|
 | **BNI Miami-Dade** | $1,099 renewal / $1,398 new member [T1] | Weekly meetings, BNI Connect platform, online training, referral tracking | 340,000+ globally; 76 countries [T2] | Structured weekly referrals among non-competing professionals |
 | **ProVisors** | ~$1,800/yr ($150/mo) [T3] | Monthly home group meetings, affinity group access, online member directory, events | 11,000+ members, 26 regions [T2] | Referral network exclusively for attorneys, CPAs, advisors |
-| **EO South Florida** | $6,371/yr ongoing ($2,630 global + $3,741 chapter); $5,500 one-time chapter initiation; $3,500 global initiation [T1] | Monthly Forum groups (6–8 peers), chapter events, global learning events, EO University | 20,000+ globally; 221 chapters [T2] | Peer learning for entrepreneurs with $1M+ revenue |
+| **EO South Florida** | **$5,570/yr + $5,500 initiation** (verified 2026-05-03 from eosoflo.com) [T1] | Monthly Forum groups (6–8 peers), chapter events, global learning events, EO University | 20,000+ globally; 221 chapters [T2] | Peer learning for entrepreneurs with $2.5M+ revenue (or venture-backed alt) |
 | **Vistage (Chief Executive)** | $10,500–$16,500/yr + $2,250 initiation [T2] | Monthly all-day peer advisory group, monthly 1:1 coaching with Chair, speaker events | 45,000+ members, 40 countries [T2] | Monthly CEO peer group plus dedicated executive coach |
 | **YPO Miami** | $9,400/yr ($4,150 global + $5,250 chapter); $14,150 one-time initiation ($4,150 global + $10,000 chapter) [T1] | Forum groups, chapter events, global learning conferences, YPO Gold post-45 transition | 38,000 globally; 150 countries [T2] | Global chief executive community under age 45 |
 | **Tiger 21** | $33,000/yr + $5,000 initiation [T2] | Monthly peer group (12–15 members), portfolio defense reviews, global events, digital platform | 1,600+ members; 50+ cities [T2] | Ultra-HNW peer group for $20M+ investable asset holders |
@@ -51,7 +51,7 @@
 
 **Characterization:** This tier represents the proven pricing floor for organizations that impose structure, exclusivity criteria, or meaningful programming. BNI requires weekly attendance and one seat per profession. ProVisors requires trusted-advisor status (attorneys, CPAs, wealth managers, consultants). Both have successfully enrolled thousands of South Florida professionals at exactly this price band. Members in this tier expect regular meeting cadence, referral accountability, and peer access — not a benefits catalog.
 
-**Implication for Tribe:** $1,200–$1,500/yr lands squarely in this tier. This is defensible pricing. The Tribe offers what BNI does not (depth over referrals, men's leadership identity) and what ProVisors does not (in-person transformational programming, community over category).
+**Implication for Tribe:** $1,500–$1,800/yr lands squarely in this tier. This is defensible pricing. The Tribe offers what BNI does not (depth over referrals, men's leadership identity) and what ProVisors does not (in-person transformational programming, community over category).
 
 ---
 
@@ -61,7 +61,7 @@
 
 **Characterization:** Members pay for peer cohort access, facilitated learning, and accountability structures. Entry requirements shift from professional category to revenue milestones (EO requires $1M+ in annual revenue; YPO requires ownership/CEO status under age 45) or company size (Vistage targets $5M+ companies). Programming is rich: Forum groups, monthly coaching, curated speaker content. This is the tier where men pay for transformation, not just transactions.
 
-**Implication for Tribe:** The Tribe's addressable member (South Florida professional, $250K–$2M+ personal income, 35–60) inhabits the edge of this tier or aspires to it. Pricing the Tribe at $1,200–$1,500 signals substantive community without requiring the revenue credentials that EO and YPO impose. This is the whitespace: structured enough to justify $1,200–$1,500, identity-driven enough to eventually migrate toward the $3K–$5K band as programming depth increases.
+**Implication for Tribe:** The Tribe's addressable member (South Florida professional, $250K–$2M+ personal income, 35–60) inhabits the edge of this tier or aspires to it. Pricing the Tribe at $1,500–$1,800 signals substantive community without requiring the revenue credentials that EO and YPO impose. This is the whitespace: structured enough to justify $1,500–$1,800, identity-driven enough to eventually migrate toward the $3K–$5K band as programming depth increases.
 
 ---
 
@@ -71,23 +71,23 @@
 
 **Characterization:** At this tier, price is a filter. The initiation fee at Tiger 21 ($5,000) and YPO Miami ($10,000 chapter alone) is itself a signal of seriousness. Organizations in this tier offer peer groups of 12–15 people, white-glove facilitation, and global event access. Vistage members average $5M+ revenue businesses. Tiger 21 requires $20M+ in investable assets. These are not aspirational communities — they are credentialed peer groups where the price anchors commitment and signals peer quality.
 
-**Implication for Tribe:** The Tribe does not compete in this tier at launch. However, these organizations establish the ceiling of member willingness to pay — and they demonstrate that South Florida professionals routinely invest $10,000–$33,000/yr for peer access when programming quality is assured. The Tribe's $1,200–$1,500 price point is not a ceiling; it is a foundation.
+**Implication for Tribe:** The Tribe does not compete in this tier at launch. However, these organizations establish the ceiling of member willingness to pay — and they demonstrate that South Florida professionals routinely invest $10,000–$33,000/yr for peer access when programming quality is assured. The Tribe's $1,500–$1,800 price point is not a ceiling; it is a foundation.
 
 ---
 
 ## Where the Tribe Should Price
 
-### Recommendation: $1,200–$1,500/yr ($100–$125/month)
+### Recommendation: $1,500/yr Founders, $1,800/yr Members (effective Y2) — $125–$150/month
 
 **Defensible rationale across five dimensions:**
 
-**1. Confirmed market-clearing price for structured professional community in South Florida.** BNI Miami-Dade charges $1,099–$1,398 for renewal and new members respectively — a pure referral network with no identity programming, no retreat, no coaching layer. ProVisors charges ~$1,800/yr for access to a trusted-advisor directory and monthly group meetings. The Tribe, at $1,200–$1,500, prices below ProVisors while offering programming depth ProVisors does not (immersive events, masculine identity work, peer cohort design). It prices at or above BNI while offering category-irrelevant peer community — a different product for a different buyer.
+**1. Confirmed market-clearing price for structured professional community in South Florida.** BNI Miami-Dade charges $1,099–$1,398 for renewal and new members respectively — a pure referral network with no identity programming, no retreat, no coaching layer. ProVisors charges ~$1,800/yr for access to a trusted-advisor directory and monthly group meetings. The Tribe, at $1,500–$1,800, prices below ProVisors while offering programming depth ProVisors does not (immersive events, masculine identity work, peer cohort design). It prices at or above BNI while offering category-irrelevant peer community — a different product for a different buyer.
 
 **2. "Under BNI" framing is accurate and compelling.** In a room of South Florida lawyers and CPAs, BNI is a known reference. The statement "we price below BNI's new-member rate, and we offer what BNI doesn't — brotherhood, depth, and a reason to show up on a Thursday that isn't about your pipeline" is factually grounded and emotionally resonant.
 
-**3. Appropriate to member income profile.** A South Florida attorney or CPA grossing $300,000–$1,000,000 annually treats $1,200–$1,500 as a rounding error in professional development spend. This price is low enough to avoid a committee approval conversation and high enough to filter out non-committed joiners. The psychographic sweet spot: the same person who writes a $1,500 check to a bar association committee writes this check.
+**3. Appropriate to member income profile.** A South Florida attorney or CPA grossing $300,000–$1,000,000 annually treats $1,500–$1,800 as a rounding error in professional development spend. This price is low enough to avoid a committee approval conversation and high enough to filter out non-committed joiners. The psychographic sweet spot: the same person who writes a $1,500 check to a bar association committee writes this check.
 
-**4. Room to grow into EO/Vistage territory.** The EO South Florida chapter charges $6,371/yr with a $9,000 total initiation cost. Vistage CEO tier runs $10,500–$16,500. These organizations demonstrate that South Florida professionals will pay dramatically more as programming depth and peer quality increase. The Tribe is not permanently priced at $1,200–$1,500 — it is priced there at formation, with a defensible path to $3,000–$5,000/yr as member count and event programming scale.
+**4. Room to grow into EO/Vistage territory.** The EO South Florida chapter charges $5,570/yr with a $5,500 initiation cost (verified 2026-05-03). Vistage CEO tier runs $10,500–$16,500. These organizations demonstrate that South Florida professionals will pay dramatically more as programming depth and peer quality increase. The Tribe is not permanently priced at $1,500–$1,800 — it is priced there at formation, with a defensible path to $3,000–$5,000/yr as member count and event programming scale.
 
 **5. Pricing below men's work retreat cost establishes value.** A single EVRYMAN weekend runs $995. A ManKind Project NWTA costs $850–$950. Sacred Sons EMX pricing is undisclosed but estimated in the $800–$1,200 range per event. The Tribe's annual membership — which includes recurring community access, not a single weekend — compares favorably to a single event cost from these competitors. This is a powerful value frame for the prospective member who has considered or attended a men's retreat.
 
@@ -95,13 +95,13 @@
 
 ## Quote-From-Memory
 
-**"BNI Miami charges $1,398 for new members to join a referral network. We charge $1,200–$1,500 for men who want more than referrals."**
+**"BNI Miami charges $1,398 for new members to join a referral network. We charge $1,500–$1,800 for men who want more than referrals."**
 
 **"ProVisors runs $1,800/yr and doesn't do weekends, retreats, or brotherhood. We do."**
 
 **"EO costs $6,371 a year in South Florida and requires $1 million in revenue. We're the on-ramp."**
 
-**"Tiger 21 charges $33,000 annually to discuss your portfolio. We charge $1,200–$1,500 to build the man behind the portfolio."**
+**"Tiger 21 charges $33,000 annually to discuss your portfolio. We charge $1,500–$1,800 to build the man behind the portfolio."**
 
 **"At $1,200 a year, we're cheaper than one EVRYMAN retreat — and we meet every month."**
 

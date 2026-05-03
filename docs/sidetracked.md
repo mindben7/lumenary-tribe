@@ -125,6 +125,81 @@ emphasize the structured CAPTURE-AND-ACT loop, not "we scrape LinkedIn"
 (which would lose credibility with the lawyer founders the moment they
 googled it).
 
+**PRIORITY UPGRADE — 2026-05-03:** Ben purchased a Sales Navigator
+quarterly subscription on 2026-05-03 (~$300, active through ~2026-08-03).
+He plans active daily use for prospecting over the full 90-day window.
+This moves the "LinkedIn Capture" module from a hypothetical future
+feature to a **near-term Q3 build**: by ~mid-June we should have at least
+a v0 of the guided-collection workflow live so Ben's daily Sales Nav
+sessions feed the BOS instead of dying in his head or in scattered notes.
+
+**Concrete v0 scope** (when revisited post-pitch):
+- A `prospects` table seeded by paste-in (one Sales Nav profile per row,
+  pasted from the right-rail profile view)
+- A "today's targets" view that suggests which Sales Nav searches Ben
+  should run based on chapter composition gaps
+- Tag the prospect with: source (search query name), chapter intent
+  (Brickell/Gables/Aventura), seat #, and outreach status
+- Daily cadence: Ben spends 30 min in Sales Nav, the BOS captures and
+  reminds him of follow-ups
+- This is a wedge for the broader Helm CRM — not a standalone tool
+
+### Daily Homework Loop — explicit workflow spec (added 2026-05-03)
+
+Ben surfaced this requirement mid-Sales-Nav-execution: he wants a daily
+checklist that tells him exactly who/how-many to connect with each day,
+and an EOD recap loop that updates tomorrow's target.
+
+**Morning (≤2 min, BOS-generated):**
+- "Today's targets" card with breakdown by seat category, e.g.:
+  - 8 CPA partners (Brickell/Gables priority)
+  - 5 Estate Planning Attorneys
+  - 4 Commercial RE Brokers
+  - 3 Wealth Managers
+  - **Total: 20 connection requests** (under LinkedIn's safe ~21/day)
+- Each line links to a pre-built Sales Nav search URL (no Ben thinking
+  required to find the right query)
+- Each line has a connection-request template per category (one-line
+  hook + opener; Ben edits to personalize)
+
+**Daily execution:**
+- Ben opens Sales Nav from the link, sends connection requests, marks
+  each in the BOS as sent
+- Time budget: 30 min/day for the full daily homework
+
+**End of day (≤3 min, Ben-driven):**
+- Ben paste-confirms completions: "Sent 18 of 20. 6 already accepted.
+  1 reply. 1 booked discovery call."
+- Optionally: paste profile URLs/names for each accept so the prospect
+  enters the `people` table for follow-up automation
+
+**BOS recomputation:**
+- Recompute remaining-days × needed-members to keep Brickell on track
+  for Month-12 target of 25 paid members
+- Adjust tomorrow's target distribution (e.g., if CPAs are accepting
+  faster than estate attorneys, shift tomorrow's mix)
+- Surface red flags: "you're 3 days behind pace on Wealth Managers"
+
+**No external API needed.**
+- LinkedIn's official API doesn't expose connection-status data anyway
+- Apollo/ZoomInfo APIs ($50–200/mo) pull a different dataset — only
+  worth it if Ben wants to ENRICH (find emails, phones, intent signals)
+  for prospects already identified via Sales Nav. Defer this decision.
+- The minimum-viable loop is: Postgres `prospects` + `connection_actions`
+  tables + a small Next.js page. Cost: $0 incremental.
+
+**Reporting Ben needs back:**
+- Weekly: pace vs. plan per category, accept rate per category, call
+  conversion rate per category
+- Monthly: revenue forecast based on current funnel velocity + chapter
+  target gap analysis
+
+**Why this matters for the founder pitch tomorrow:**
+This loop is one of the concrete BOS features that justifies hiring Ben
+vs. a generalist social media person. He should mention it as a *Helm
+v0.2 capability* rather than promising it day-one — credibility before
+delivery.
+
 ---
 
 ## Captured BOS requirements (for Slice 2/3 specs, not now)
@@ -158,6 +233,233 @@ is the UI: kanban-style board showing prospect → discovery call →
 applicant → paid → active, with filters by source (chamber, referral,
 web, event) and chapter assignment. Replaces a HubSpot/Salesforce setup
 for Ben's day-to-day. Should be the *default* Helm landing screen.
+
+---
+
+## Interactive territory-mapping module (Helm / BOS feature)
+
+**Idea:** A custom interactive map inside the BOS that lets Ben define
+*territories* — geographic catchment areas as center-point + radius (or
+polygon) — and plot prospects/members within them. Each pin represents a
+person from the LinkedIn outreach pipeline (or ingested from Sales Nav
+exports). Layer filters: profession, seniority, chapter assignment,
+referral source, last-touch date. Use cases:
+- **Targeting view**: show density of "Accomplished Seeker" prospects per
+  ZIP / radius before launching a new chapter
+- **Chapter coverage view**: visualize where current Brickell members live
+  vs. where the chapter's pull radius actually reaches
+- **Expansion planning**: paint a 5-mile geofence around a candidate
+  venue, count prospects inside, score the zone
+- **Coach-up tool for chapter leaders**: heatmap of underserved ZIPs
+
+**Professional terms in this space:**
+- *Territory mapping / sales territory design* (the umbrella discipline)
+- *Geofencing* (radius/polygon-based catchment definition)
+- *Heatmap visualization* (prospect-density rendering)
+- *TAM (Total Addressable Market) mapping* (the strategic frame)
+- *Site selection analytics* (for picking chapter-launch venues)
+
+**Tools to study before building:** Maptive, Badger Maps, Geopointe,
+Salesforce Maps, ZoomInfo Territory Planning, Mapbox Studio (build-your-
+own), Felt (collaborative mapping). For Florida-specific demographic
+overlays: Esri ArcGIS Business Analyst, Census Reporter, Placer.ai.
+
+**Why parked:** This is a Slice 2 (Helm) or Slice 3 (Tribe Site) feature.
+It is a multi-day build (geocoding pipeline, map UI, prospect data model,
+auth) and is not on the critical path for tomorrow's founder pitch. The
+binder + Sales Nav verification pass IS the critical path. Sales Nav
+itself has a built-in map view for current targeting needs.
+
+**Already referenced in founding vision:** Ben's 2026-05-02 brain dump
+explicitly mentioned "a simple map with whatever API or whatever that we
+create to show the different groups geographically, to help us understand
+what this group would look like on a larger scale." This idea has been
+load-bearing from day one — it is a *feature*, not a tangent.
+
+**Next step when revisited:** After founder engagement is signed, spec
+"Territory Map" as a Helm module. Decide: native build (Mapbox + Postgres
++ PostGIS) vs. integrated (Maptive embed, Felt embed). Define prospect
+data model first (people + interactions tables already exist per
+architecture spec) — the map is a view layer over that.
+
+---
+
+## Horizontal-scroll AI-generated timeline mind-map ("Chronos view")
+
+**Idea:** A view inside the BOS that takes any structured content (a
+strategy doc, a launch plan, a campaign, a research binder) and
+auto-generates an **interactive horizontal timeline** where the x-axis
+is time. Behavior:
+
+- **Mouse-wheel** scrolls horizontally (wheel down → forward in time;
+  wheel up → backward). Non-standard UX but reduces friction vs.
+  click-and-drag panning.
+- **Mind-map-style nodes** placed at their respective time positions;
+  related nodes connected by edges (cause/effect, depends-on, etc.)
+- **Zoom levels:** decade → year → quarter → month → week, all on the
+  same continuous axis (think Google Maps zoom but for time)
+- **AI ingestion:** point Chronos at a project folder (or a single doc),
+  it extracts events with dates/sequence, generates the timeline JSON,
+  renders. Powered by Claude API with a structured event-extraction
+  prompt.
+
+**Use cases inside the BOS:**
+- Render the §4 Miami Launch Sequence (chapters, override windows,
+  retreats) as an interactive 36-month timeline
+- Member-acquisition cohort tracking (who joined when, who churned when,
+  funnel velocity over time)
+- Ad campaign sequencing (Meta/LinkedIn campaigns mapped to chapter
+  launch dates)
+- Personal/Life Engine timeline (deferred to Ben's private namespace)
+
+**Closest existing tools (none match all three: horizontal-scroll +
+mind-map + AI auto-generation):**
+- Tiki-Toki — commercial interactive web timelines; no AI ingestion
+- Aeon Timeline — desktop app, $59, novelist-focused; no AI; no MW scroll
+- Heptabase — spatial canvas; can lay out timeline-like but not native
+- Knight Lab TimelineJS — free, slide-based, embeds in articles
+- Miro / FigJam — infinite canvas with timeline templates, manual
+- Notion timeline view — list/table-based, not visual mind-map
+
+**Build estimate (when revisited post-pitch):** 1–2 weeks for a v0:
+- Tech stack: Next.js + d3.js (or react-flow for nodes/edges) + Claude
+  API (ingestion + event extraction)
+- Data model: `events` table with `(id, label, start_date, end_date?,
+  type, parent_id?, metadata)` — fits naturally alongside the existing
+  `people` and `interactions` tables in the architecture spec
+- Renderer: SVG or canvas; horizontal scroll handler converts wheel
+  events to translateX
+- AI prompt: "Extract events from the following project content. For
+  each event provide: label, date (or date range), type (milestone,
+  campaign, content piece, member-touch, etc.), and parent event if
+  applicable. Return JSON."
+
+**Why parked:** Cool, useful, novel — and explicitly NOT on the path to
+tomorrow's founder pitch. The §4 launch sequence already exists in
+table form; rendering it as Chronos is a delight upgrade, not a
+deliverable upgrade. Belongs in Slice 2 (Helm) v0.3+ as the
+"strategy visualization" feature. May also become a marketable feature
+of the BOS itself in Slice 4 (productized BOS).
+
+---
+
+## Florida licensed-professional database integration (Slice 2 Helm)
+
+**Idea:** The BOS automatically pulls from public Florida license databases
+to seed and enrich the prospect database with verified, ToS-clean,
+authoritative data that LinkedIn cannot match. None of BNI, EO, ProVisors,
+Vistage, or Tiger 21 currently does this. Strong differentiator.
+
+**Public databases to integrate (all free, public records):**
+- **Florida DBPR** — myfloridalicense.com — CPAs, real estate brokers,
+  contractors, cosmetologists, etc. Searchable by name, license type,
+  county, ZIP. Returns exact licensee counts.
+- **The Florida Bar** — floridabar.org/directories/find-mbr — attorney
+  directory searchable by city + practice area. Returns Bar number,
+  firm affiliation, status, practice area tags.
+- **Florida DFS** — myfloridacfo.com — insurance agent license search;
+  P&C, life, health licensees by appointment company and county.
+- **FINRA BrokerCheck** — brokercheck.finra.org — broker-dealer reps and
+  firms; disciplinary history; CRD numbers.
+- **SEC IAPD** — adviserinfo.sec.gov — registered investment advisers and
+  IAR (investment adviser representative) records.
+- **Florida DOH** — flhealthsource.gov — physicians, dentists, ARNPs,
+  PAs licensee search.
+
+**Use cases:**
+- **True TAM denominator:** "of the 11,400 licensed CPAs in Miami-Dade,
+  Sales Nav indexes 139 at decision-maker level — we're targeting the
+  top 1.2% of the licensed pool." This number is more credible than
+  Sales Nav alone.
+- **Verification:** before extending a Tribe membership offer, confirm
+  the prospect's license is active and in good standing (no
+  disciplinary action). Founders will love this — it's professional
+  due diligence at the moneyline.
+- **Enrichment:** auto-populate firm affiliation, practice area, license
+  vintage. Saves Ben manual research time per prospect.
+- **Outreach prioritization:** flag CPAs whose license vintage is
+  10–25 years (sweet spot for "founding partner" career stage that
+  matches the Accomplished Seeker persona).
+
+**Technical pattern:**
+- Most of these databases are JS-rendered or use POST forms. Direct
+  scraping is harder than LinkedIn but legally clean.
+- Best path: partner with a data vendor that already aggregates these
+  (e.g., License Lookup APIs, ProPublica Nonprofit Explorer for org
+  data). Search market post-pitch.
+- Alternative: lightweight Playwright scripts (server-side) hitting
+  each database's public search form; cache results aggressively.
+
+**Tonight's binder use:**
+- Don't pull these tonight. Sales Nav data is sufficient for the
+  founder pitch with proper framing.
+- Phase-2 binder (week-of-engagement): add license-database
+  cross-checks for top 5 professions to compute "Sales Nav coverage %
+  of licensed pool" stat. This is a sophisticated number that
+  differentiates Ben from a generic social-media hire.
+
+**Why parked tonight:** Each database has its own search form, captcha,
+and rate limit. Implementing in 60 min is impossible. The methodology is
+a Phase-2 binder enhancement, not a Slice-1 deliverable.
+
+---
+
+## Sales Nav title-variant expansion (binder methodology refinement)
+
+**Idea:** The current Sales Nav search script uses 1–3 title variants
+per profession. Real practitioners use 5–15 variants. Expanding the
+title-variant list per row would 2–5x the indexed count per profession
+and produce more accurate cross-row comparisons.
+
+**Example expansion for Estate Planning Attorney (row 2):**
+Current: `Estate Planning Attorney`, `Trusts and Estates Attorney`
+Expanded: + `Probate Attorney`, `Wills and Trusts Attorney`, `Estate
+Planning Counsel`, `Estate Planning Lawyer`, `Tax and Estate Attorney`,
+`Trust Officer`, `Fiduciary Officer`, `T&E Attorney`, `Estate & Probate
+Attorney`
+
+**Why parked tonight:** Methodology must be locked across all 15 rows
+for cross-comparison to work. Expanding mid-stream means re-running
+rows 1–2 plus expanding the script for rows 3–15 = ~15–20 min cost
+during a tight time-box. Tonight's binder explicitly frames the data
+as "exact-title indexed counts" with the systematic undercount
+documented as a methodology footnote.
+
+**When revisited (Phase-2 binder, ~week of engagement):**
+- Build a comprehensive title-variant taxonomy per profession (one
+  source of truth) — store in `docs/research/title-variants.md`
+- Re-run all 15 Sales Nav searches with full variant lists
+- Cross-check against license-database true counts (see preceding
+  sidetracked entry)
+- Update binder D4 with the upgraded numbers
+- Use the comparative ratio (exact-title : full-variant : licensed)
+  as a methodological footnote — demonstrates rigor
+
+---
+
+## Reverse-engineer Swoopa's subscription/pricing model
+
+**Reference:** https://getswoopa.com/subscription-options/
+
+**Idea:** Eventually study Swoopa's subscription tier structure as a model
+for how the BOS could package its own subscription options (member tiers,
+chapter-leader tiers, add-ons, retreat pricing, etc.). What to extract:
+- Tier composition (what's bundled at each level, where the upsell breaks live)
+- Pricing anchors and decoy/middle-tier psychology
+- Annual vs. monthly framing
+- Add-on / a-la-carte mechanics
+- Trial / founder / loyalty pricing patterns
+- Checkout flow, social proof, and friction reduction tactics
+
+**Why parked:** Pricing recommendation for the founder pitch is already
+locked at $1,500 Founders / $1,800 Members (binder §3) — anchored on
+direct competitor benchmarks (BNI, ProVisors, EO, Vistage, Tiger 21), not
+on Swoopa. Swoopa is interesting as a *packaging* model for Slice 3 (Tribe
+Site checkout) and future tier expansion, not as input to Slice 1.
+
+**Next step when revisited:** After Slice 1 ships, scrape the public
+Swoopa subscription page, decompose the tier structure, and feed it into
+the Slice 3 (Tribe Site) checkout-design spec.
 
 ---
 

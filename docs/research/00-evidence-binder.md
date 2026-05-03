@@ -54,11 +54,11 @@ The five findings that earn the engagement.
 **1. The positioning gap is real, structural, and unoccupied.**
 No organization in South Florida — and none nationally — currently combines
 executive-grade peer accountability (EO/Vistage caliber), intentional men's
-work (MKP/Sacred Sons depth), and licensed psychedelic-assisted /
-breathwork integration inside a single ongoing membership container. Every
-existing org owns one or two of those nodes and openly cedes the third.
-The Tribe's defensible position: *"Where serious men do serious inner work —
-together."*
+work (MKP/Sacred Sons depth), and integrated somatic, breathwork, and
+embodied-practice programming inside a single ongoing membership container.
+Every existing org owns one or two of those nodes and openly cedes the
+third. The Tribe's defensible position: *"Where serious men do serious
+inner work — together."*
 
 **2. $1,200–$1,500/yr is a market-validated price band.**
 BNI Miami-Dade charges $1,099–$1,398/yr (confirmed from official dues
@@ -122,6 +122,49 @@ and geographic findings across D4, D6, and L3.
 to know whether to invest in a conversation, it's: *"What's the deepest
 thing you've worked on in the last twelve months?"* The Accomplished
 Seeker has an answer; the wrong-fit prospect deflects to a deal he closed.
+
+## Cohort Weighting Protocol — bias Founder selection toward 38–45
+
+Within the Accomplished Seeker range, **weight the Year-1 Founders cohort
+toward the younger end (38–45) to maximize cumulative chapter LTV,
+network-building velocity, and engagement compounding.** Older qualified
+prospects are not declined — they are slotted into Year-2+ growth seats
+once chapter culture is established.
+
+**The LTV math the founders will recognize:**
+
+| Entry age | Avg tenure (ASAE peer-org benchmark) | Lifetime dues @ $1,500/yr |
+|---|---|---|
+| 38 | ~12 years | **~$18,000** |
+| 45 | ~10 years | ~$15,000 |
+| 52 | ~8 years | ~$12,000 |
+| 58 | ~6 years | ~$9,000 |
+
+A 30-seat chapter biased toward the younger half of the range vs. the
+older half generates roughly **$270,000 in additional cumulative dues
+over chapter lifetime** — before retreat add-ons, override extensions,
+or referral revenue.
+
+**Industry validation already in this binder:**
+- **YPO caps membership at age 45** because they have measured that
+  network-building velocity peaks in members' 30s–40s. *(D5)*
+- **BNI documents 35–50 as the highest-engagement age band** for chapter
+  participation and referral throughput. *(D2)*
+- **Affinity-activity participation skews younger** (Strava run-club Gen Z
+  data, Mindbody breathwork attendance trends). Younger Founders convert
+  affinity-event attendance into membership at higher rates. *(L4)*
+
+**The compounding effect:**
+A 38-year-old Founder who stays 12 years becomes a *10-year evangelist* —
+recruiting his peer cohort, sponsoring chapter splits, and sustaining
+culture into Year-3. A 58-year-old Founder typically reduces participation
+in years 4–6 (retirement, slower travel, lifestyle shift), forcing
+seat-replacement work that drains chapter momentum.
+
+**Operational rule for prospect intake:** when two qualified prospects
+surface in the same seat category for the same chapter, default to the
+younger one for Year-1 Founder selection. Document this as the *Cohort
+Weighting Protocol* in the membership-committee playbook.
 
 ---
 
@@ -204,6 +247,31 @@ A 36-month rollout tied to chapter composition rules and confirmed market densit
 plus override math (15% × $70,500 = $10,575/yr override stream for Ben,
 extending 24 months from each chapter's launch).
 
+## Warm Channel Inventory — Year 1 acquisition stack
+
+The Year-1 Brickell launch is **not** a cold-outreach dependency. Four
+warm channels are already in place, materially de-risking the
+chapter-fill timeline:
+
+1. **Founder/coach relationship** — direct internal advocate at the
+   founding-team level
+2. **BNI Millionaires Group** — joint reconnaissance already conducted;
+   prospect-rich room with pre-existing introduction pathway
+3. **Brickell Rotary Club** — direct warm-intro relationship into a
+   civic organization that selects exactly for the Accomplished Seeker
+   persona (40–55, business-owner, civic-minded, Brickell-resident)
+4. **Greater Miami Chamber of Commerce** — broader SMB-owner pipeline
+   for Year-1 funnel top
+
+Plus **Sales Navigator cold outreach** as the systematic floor (~7 paid
+members per 90-day window per the funnel math).
+
+**Pitch frame for the founder meeting:** *"Brickell isn't a cold launch.
+Four independent warm channels feed the funnel from day one, with cold
+LinkedIn as the systematic floor. No single channel is load-bearing."*
+This is the answer to the founders' inevitable *"how will you fill it?"*
+question.
+
 ## Year 2 — Diversification (Months 13–24)
 
 ### Chapter 3: Aventura
@@ -251,9 +319,12 @@ in demand.
 
 # §5 — Stats Cheat Sheet (Artifact B)
 
-The 30 most important numbers from this binder, organized by topic.
+The 32 most important numbers from this binder, organized by topic.
 **Memorize this page.** If you can quote 10 of these from memory cold,
-you walk into the room armed.
+you walk into the room armed. The new stats 15a and 15b (added
+2026-05-03) are the **two highest-leverage adds for the founder pitch**
+because they answer the "is the market deep enough?" question with hard
+numbers no competitor has.
 
 ## Chapter Size & Composition
 
@@ -266,8 +337,8 @@ you walk into the room armed.
 ## Pricing Benchmarks
 
 6. **BNI Miami-Dade: $1,099 renewal / $1,398 new member** — confirmed from official dues page. *(D3, T1)*
-7. **ProVisors: ~$1,800/yr** for 9,000+ trusted advisors across 26 regions. *(D3, T2)*
-8. **EO South Florida: $6,371/yr ongoing + $9,000 first-year initiation**, $2.5M revenue minimum. *(D3, T1)*
+7. **ProVisors: ~$1,800/yr** for **11,000+** trusted advisors across 26+ regions (verified 2026-05-03 from provisors.com). *(D3, T2)*
+8. **EO South Florida: $5,570/yr + $5,500 initiation** (verified 2026-05-03 from eosoflo.com), $2.5M revenue minimum. *(D3, T1)*
 9. **Vistage: $10,500–$16,500/yr**, 12–16 CEOs, monthly all-day. *(D3, T2)*
 10. **Tiger 21 Miami: $33,000/yr + $5,000 initiation**, $20M qualifying net worth. Family Office tier: $50,000/yr. *(D3, T2)*
 
@@ -278,18 +349,20 @@ you walk into the room armed.
 13. **Coral Gables holds 4,114 professional services workers** — the second-highest cluster after Brickell. Median HHI $134,216. *(D4, T1)*
 14. **Doral hosts 12,000+ businesses, 100 multinational HQs, and 16 Fortune 500 companies.** *(D4, T2)*
 15. **Pinecrest median HHI: $192,477–$206,417** — top-quintile nationally; 75% of labor force is white-collar. *(D4, T1)*
+15a. **1,670 LinkedIn-indexed decision-makers across our 15 target seat categories in Miami-Fort Lauderdale Area metro** — verified Sales Nav 2026-05-03. The Tribe's 10-chapter, 250-member long-term capacity = 15% of this addressable pool. *Headroom is structural, not a constraint.* *(D4, T1)*
+15b. **Wealth Managers are the dominant pool: 563 indexed decision-makers** — 4× the next-largest category. Validates Aventura wealth-corridor thesis. *(D4, T1)*
 
 ## Competitive Landscape
 
 16. **80+ BNI chapters** operate in South Florida (Miami-Dade + Broward + Palm Beach combined). *(D5, T1)*
 17. **23 ProVisors home groups + 4 affinity groups** are active in South Florida. *(D5, T1)*
-18. **EO South Florida claims 200+ members** running $2B+ in collective annual revenue. *(D5, T2)*
-19. **15+ active Vistage chairs** across Miami (7), Fort Lauderdale (5), and Palm Beach (7). *(D5, T1)*
+18. **EO South Florida reported 200+ members and $2B+ collective revenue (2019)** — most recent published figure; current count likely higher. *(D5, T2)*
+19. **15+ active Vistage chairs** spanning the Miami / Fort Lauderdale / Palm Beach tri-county area. *(D5, T1)*
 20. **Tiger 21 Miami operates 5+ confirmed groups** plus a Fort Lauderdale Family Office group. *(D5, T1)*
 
 ## Spiritual / Wellness Comparables
 
-21. **No South Florida or national org occupies all three nodes** of executive peer + somatic/spiritual practice + licensed psychedelic facilitation in a single ongoing membership container. *(D6, synthesis)*
+21. **No South Florida or national org occupies all three nodes** of executive peer accountability + intentional men's work + integrated somatic / breathwork / embodied-practice programming in a single ongoing membership container. *(D6, synthesis)*
 22. **EVRYMAN and Sacred Sons both suffered governance crises in 2023–24** — leadership departures, founder transitions, brand instability. The vacuum is deeper than it looks. *(D6, T2/T3)*
 23. **Psychiatrists' therapeutic openness to psychedelics rose from 42% (2016) to 81% (2024)** — nearly doubled in under a decade. *(L3, T1)*
 24. **94% of association members are comfortable with AI in their membership experience** — only 27% of associations actually deliver personalized communication. *(L2, T1)*
@@ -330,12 +403,13 @@ its topic. They live alongside this assembly file:
 | Synthesis sections (12, 13, 14) each fit on one page | ✅ | This document, §2/3/4 |
 | Every page has ≥1 "Key Stat" callout | ✅ in line files; ⚠️ this assembly relies on §5 cheat sheet for that role |
 | Appendix lists every source with URL/access date | ✅ in each line file's Sources Appendix |
-| Ben can quote 10 binder stats from memory after one careful read | ⏳ Pending Ben mastery review |
+| Ben can quote 10 binder stats from memory after one careful read | ⏳ Pending Ben mastery review (queued next after binder fix pass completes 2026-05-03) |
 
 # Appendix C — Open follow-ups before founder meeting
 
-1. **D4 Sales Navigator second pass** — once Ben subscribes, verify zone-by-zone profession headcounts and replace public-source proxies with verified counts
-2. **D1 citation verification** — two flagged citations (Centellegher 2020 mobile-phone authorship; Luo 2019 social loafing meta-analysis authorship) need DOI verification before formal use
-3. **Sacred Sons EMX pricing** — currently estimated; needs primary verification (sacredsons.com/calendar or info@sacredsons.com)
-4. **Conscious Capitalism Miami chapter pricing** — not publicly listed; verify via info@consciouscapitalism.org
-5. **ProVisors monthly dues** — $150/mo figure is member-reported (T3); confirm with official source if accessible
+1. **D4 Sales Navigator Phase 1 pass** — ✅ **COMPLETED 2026-05-03.** 15 target seat categories indexed at decision-maker seniority across Miami-Fort Lauderdale Area metro. Total addressable pool: 1,670 decision-makers. Wealth Manager dominance (563) confirmed. New section added to D4: "Sales Nav Verified Counts — Phase 1 Pass." Phase 2 (zone-level ZIP+radius spot checks + Florida licensing database cross-checks + title-variant expansion) deferred to post-engagement.
+2. **D1 citation verification (Centellegher 2020)** — ❌ **UNVERIFIABLE / replaced.** Web verification 2026-05-03 confirmed the cited DOI (10.1371/journal.pone.0229904) belongs to an unrelated 2020 paper on mouse placental imprinting (Denomme et al.). The closest real Centellegher paper is 2017 (PLOS ONE 12(3) e0173110) but it studies personality traits — not the "60% time with top-15" claim attributed to it. **Replaced** with verified Mac Carron, Kaski & Dunbar (2016, *Social Networks* 47, 151–155, DOI 10.1016/j.socnet.2016.06.003) for the mobile-phone-data validation of Dunbar layers. The "60%/top-15" body-text figure has been removed pending primary source. See d1-chapter-size.md verification block.
+3. **D1 citation verification (Luo 2019)** — ❌ **UNVERIFIABLE / replaced.** Web verification 2026-05-03 found no Luo 2019 social loafing meta-analysis in any indexed source (Google Scholar, PsycNET, Semantic Scholar, ResearchGate). The Luo-name social loafing literature that exists is Zhenpeng Luo et al. 2021 — qualitative, not a meta-analysis. **Replaced** with the canonical Karau & Williams (1993, *J. Personality and Social Psychology* 65(4), 681–706, DOI 10.1037/0022-3514.65.4.681) — older but bulletproof, 78-study meta-analysis confirming social loafing generalizes across cultures with culture as a moderator. The 35–40 member chapter-size threshold is now correctly attributed to the Hackman + BNI synthesis line, not to a meta-analytic finding. See d1-chapter-size.md verification block.
+4. **Sacred Sons EMX pricing** — ⚠️ **PARTIAL / verified gap.** Web verification 2026-05-03: sacredsons.com EMX product pages (/emx, /product/emx-florida, /product/emx-sandiego-ca, /product/emx-san-diego-december-2025) all return empty bodies to crawlers — JS-rendered behind a registration funnel. No T3 community figure surfaced via Reddit/Substack/Medium. Confirmed from search snippets: 72-hour Thu PM → Sun PM format; Foundation provides scholarships to 1 in 5 men. Defensible fallback now codified in d6: "Sacred Sons does not publish EMX pricing; comparable men's-work weekend retreats (MKP NWTA $375–$1,195; EVRYMAN $1,000–$2,500) place EMX in the $800–$1,500 range." See d6-spiritual-comparables.md.
+5. **Conscious Capitalism Miami chapter pricing** — ❌ **UNVERIFIABLE / structurally absent.** Web verification 2026-05-03: consciouscapitalism.org/chapters lists 18 official U.S. chapters — **Florida is not among them**. consciouscapitalismfl.org operates as a state-level affiliate with no published dues structure (only a "Get Updates" email signup). Pathway to actual pricing: contact info@consciouscapitalismfl.org. **Defensible reframe for pitch (now codified in d5/d6):** "Conscious Capitalism has no listed Miami or Florida chapter and no published dues — meaning it does not currently compete in the Tribe's price-band conversation." This is actually a stronger competitive-landscape statement than an estimated price would have been.
+6. **ProVisors monthly dues** — ⚠️ **PARTIAL.** Direct fetch of provisors.com/membership-benefits and /how-to-join confirms zero published dollar figures (only "Submit your annual membership dues" and ROI testimonials). The ~$150/mo (~$1,800/yr) Glassdoor member-reported figure remains the best public estimate and is correctly flagged T3 in d5. Official pathway: 888.684.4437 / provisors@provisors.com. The $1,800/yr stat in §3 Pricing Synthesis remains usable with explicit T3 qualifier.
