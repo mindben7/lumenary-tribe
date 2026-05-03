@@ -91,6 +91,42 @@ eventually have its own brand-positioning spec when we get past Slice 1.
 
 ---
 
+## LinkedIn / Sales Navigator integration (Slice 2 Helm — with legal constraint)
+
+**Idea:** A BOS module that captures LinkedIn / Sales Navigator data into
+the Resources library and triggers strategy-doc updates as new prospect
+data arrives. Ben sees this as central to his unique contribution — a
+research-and-action loop that no BNI/EO/ProVisors operator runs today.
+
+**Hard constraint — LinkedIn ToS:**
+- LinkedIn explicitly prohibits scraping in its User Agreement
+- *HiQ Labs v. LinkedIn* (9th Cir. 2022; SCOTUS denied cert) clarified
+  that public-profile scraping is not a CFAA violation, but it remains a
+  ToS breach with civil liability and account termination risk
+- Sales Navigator scraping is more clearly forbidden than public scraping
+- Automated headless-browser scraping of LinkedIn = account termination
+  risk + plausible legal exposure for Ben personally
+
+**What's clean:**
+- **Manual data entry**: Ben searches Sales Nav, copies findings, the BOS
+  structures and acts on what he pasted. Fully ToS-compliant.
+- **LinkedIn API (limited)**: very restricted; mostly for posting / OAuth
+  identity, not for prospect search at the granularity Sales Nav offers.
+- **Apollo, ZoomInfo, Crunchbase** as alternative B2B data sources with
+  legitimate APIs — paid, but legal. Worth considering.
+- **A "guided collection" pattern**: BOS shows Ben exactly which Sales
+  Nav search to run; he runs it; he pastes structured output back; BOS
+  ingests. This is the *Guided Research Mode* idea already in this file.
+
+**Next step when revisited:** Slice 2 spec for Helm should include a
+"LinkedIn Capture" module that follows the guided-collection pattern, NOT
+the scraping pattern. The value Ben pitches to the founders should
+emphasize the structured CAPTURE-AND-ACT loop, not "we scrape LinkedIn"
+(which would lose credibility with the lawyer founders the moment they
+googled it).
+
+---
+
 ## Captured BOS requirements (for Slice 2/3 specs, not now)
 
 These are real product requirements Ben surfaced during Slice 1 work. They

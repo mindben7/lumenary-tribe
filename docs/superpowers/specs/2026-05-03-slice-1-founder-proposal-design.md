@@ -2,7 +2,7 @@
 title: Slice 1 — Founder Proposal (Engagement Pitch)
 date: 2026-05-03
 status: approved (design); drafting plan to follow
-parent: docs/superpowers/specs/2026-05-03-luminary-architecture-design.md
+parent: docs/superpowers/specs/2026-05-03-lumenary-architecture-design.md
 slice_scope: Slice 1 only — the founder pitch deliverable. Slices 2–3 specced separately.
 audience: Tribe founders (working professionals — lawyers, CPAs, commercial real estate veterans). Sophisticated readers who consume contracts for a living.
 ---
@@ -252,5 +252,5 @@ When the implementation plan produces the actual artifacts:
 
 - Founding intent and tone: `docs/00-founding-vision.md`
 - Architecture spec (relevant once engagement is signed and Slice 2/3 begin):
-  `docs/superpowers/specs/2026-05-03-luminary-architecture-design.md`. The
+  `docs/superpowers/specs/2026-05-03-lumenary-architecture-design.md`. The
   proposal itself is independent of the BOS build.

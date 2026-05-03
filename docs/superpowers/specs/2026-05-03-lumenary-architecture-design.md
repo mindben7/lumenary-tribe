@@ -1,5 +1,5 @@
 ---
-title: Luminary Tribe BOS — Architecture & Data Spine Design
+title: Lumenary Tribe BOS — Architecture & Data Spine Design
 date: 2026-05-03
 status: approved (architecture only); per-slice feature specs follow
 parent: docs/00-founding-vision.md
@@ -15,7 +15,7 @@ file, this file wins unless the feature spec explicitly amends it.
 
 ## Naming conventions used in this document
 
-- **Working project name:** "Luminary Tribe BOS." The actual tribe organization's
+- **Working project name:** "Lumenary Tribe BOS." The actual tribe organization's
   legal/brand name is not yet confirmed by Ben — see Open Questions.
 - **Helm:** Slice 2, the operator command center. Single-user (Ben), private,
   optimized for speed of iteration over polish.
@@ -41,7 +41,7 @@ file, this file wins unless the feature spec explicitly amends it.
 ## 2. Repo layout
 
 ```
-luminary-tribe/
+lumenary-tribe/
 ├── apps/
 │   ├── helm/                    # Slice 2: operator command center
 │   └── tribe-site/              # Slice 3: public funnel + member platform

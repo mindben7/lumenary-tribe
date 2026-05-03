@@ -185,7 +185,7 @@ These add real depth but cost Ben time, not money. Decide per item.
 
 | Source | Time cost | Use |
 |---|---|---|
-| Visit one BNI chapter as a guest | 2 hr (incl. travel) | D2 firsthand category-rule observation |
+| ~~Visit one BNI chapter as a guest~~ — **already done**: Ben attended BNI Millionaires Group with his coach (a tribe founder). Observations to be debriefed and captured into D2/D5. | 0 hr (already invested) | D2 + D5 firsthand competitive intel |
 | Visit one ProVisors meeting as a guest | 2 hr | D2 looser-model comparison firsthand |
 | 1–3 phone calls with networking-org leaders Ben can warm-intro to | 30–45 min each | D5 + D6 — anything not in public sources |
 | Coffee with a former BNI director (if reachable in S. FL) | 1 hr | D2 + D3 — internal economics nobody publishes |
@@ -261,5 +261,5 @@ tag so Ben knows when he's quoting bedrock vs. bleeding edge.
 ## 10. Cross-reference
 
 - Founder proposal spec this feeds: `docs/superpowers/specs/2026-05-03-slice-1-founder-proposal-design.md`
-- Architecture (relevant later for the Resources library this binder seeds): `docs/superpowers/specs/2026-05-03-luminary-architecture-design.md`
+- Architecture (relevant later for the Resources library this binder seeds): `docs/superpowers/specs/2026-05-03-lumenary-architecture-design.md`
 - Sidetracked items NOT in this binder's scope: `docs/sidetracked.md`

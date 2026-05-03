@@ -1,5 +1,5 @@
 ---
-title: Founding Vision — Luminary Tribe Business Operating System
+title: Founding Vision — Lumenary Tribe Business Operating System
 date: 2026-05-02
 author: Ben (MindBenT Media)
 status: north-star (verbatim brain dump — do not edit)

@@ -48,4 +48,10 @@ logs/
 *.log
 
 # stray
-Luminary Strategy Center
+Lumenary Strategy Center
+
+# secrets (DO NOT REMOVE)
+api-key.rtf
+*.rtf
+.env
+.env.*
