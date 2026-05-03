@@ -14,7 +14,6 @@ import { useTimelineStore } from '@/store/useTimelineStore';
 import { IngestionPanel } from './IngestionPanel';
 import { ChronosNode } from './ChronosNode';
 import { TimeAxis } from './TimeAxis';
-import { LaneBackgrounds } from './LaneBackgrounds';
 import { MOCK_NODES, MOCK_EDGES } from '@/data/mockLaunchSequence';
 
 const nodeTypes: NodeTypes = {
@@ -56,7 +55,10 @@ const TimelineCanvasInner = () => {
   return (
     <div className="w-full h-full relative overflow-hidden" onWheel={handleWheel}>
       <TimeAxis />
-      <LaneBackgrounds />
+      
+      {/* Central Visual Axis (The "SoundCloud" Line) */}
+      <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-amber-500 -translate-y-1/2 z-0 opacity-50 pointer-events-none shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+
       <ReactFlow
         nodes={nodes}
         edges={edges}

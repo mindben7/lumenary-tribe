@@ -11,7 +11,6 @@ export const ChronosNode = memo(({ data, selected }: NodeProps<TimelineEventNode
   
   const { startDate, endDate, label, type, isAiExtracted, confidence } = data;
 
-  // Use useMemo for safer date parsing and width calculation
   const { dynamicWidth, formattedStart, formattedEnd } = useMemo(() => {
     const start = new Date(startDate);
     const end = endDate ? new Date(endDate) : null;
@@ -36,14 +35,14 @@ export const ChronosNode = memo(({ data, selected }: NodeProps<TimelineEventNode
   return (
     <div 
       className={`
-        px-4 py-3 shadow-sm rounded-md border-2 bg-white flex flex-col gap-1 transition-all duration-200
-        ${selected ? 'border-zinc-800 ring-4 ring-zinc-100 scale-105' : 'border-zinc-200 hover:border-zinc-400'}
+        px-4 py-3 shadow-sm rounded-lg border bg-white/90 backdrop-blur flex flex-col gap-1 transition-all duration-200
+        ${selected ? 'border-blue-500 ring-4 ring-blue-500/20 scale-105 shadow-blue-500/20 shadow-xl' : 'border-zinc-200 hover:border-zinc-400 hover:shadow-md'}
         ${isPhase ? '' : 'min-w-[120px] max-w-[200px]'}
       `}
       style={{ width: isPhase ? dynamicWidth : undefined }}
     >
       <div className="flex items-center justify-between gap-2 border-b border-zinc-100 pb-1">
-        <span className={`text-[10px] font-bold uppercase tracking-wider ${isPhase ? 'text-blue-500' : 'text-amber-600'}`}>
+        <span className={`text-[10px] font-bold uppercase tracking-wider ${isPhase ? 'text-indigo-500' : 'text-emerald-600'}`}>
           {type}
         </span>
         {isAiExtracted && (
@@ -62,8 +61,11 @@ export const ChronosNode = memo(({ data, selected }: NodeProps<TimelineEventNode
         {formattedEnd && ` → ${formattedEnd}`}
       </div>
 
-      <Handle type="target" position={Position.Left} className="w-2 h-2 !bg-zinc-400 border-none" />
-      <Handle type="source" position={Position.Right} className="w-2 h-2 !bg-zinc-400 border-none" />
+      {/* Invisible multi-directional handles for organic routing */}
+      <Handle type="target" position={Position.Top} className="opacity-0" />
+      <Handle type="source" position={Position.Bottom} className="opacity-0" />
+      <Handle type="target" position={Position.Left} className="opacity-0" />
+      <Handle type="source" position={Position.Right} className="opacity-0" />
     </div>
   );
 });
