@@ -91,6 +91,40 @@ eventually have its own brand-positioning spec when we get past Slice 1.
 
 ---
 
+## Captured BOS requirements (for Slice 2/3 specs, not now)
+
+These are real product requirements Ben surfaced during Slice 1 work. They
+are NOT sidetracked in the "abandon" sense — they belong in the eventual
+Slice 2 (Helm) and Slice 3 (Tribe Site) feature specs. Captured here so
+they don't get lost while we focus on Monday research.
+
+### Category-locked payment flow (Slice 3)
+At checkout, member must declare profession/category. If that category is
+already filled in the requested chapter (per the BNI-style "one per
+category" rule we'll validate in Monday research), the system either:
+(a) blocks payment with a "this category is full — choose another chapter"
+flow, (b) waitlists them, or (c) routes them to the nearest chapter where
+the category is open. Specific behavior to be designed in Slice 3 spec.
+This enforces composition rules at the moneyline — the most reliable
+enforcement point.
+
+### Payment + escrow integration (Slice 3)
+Architecture says "Stripe via Vercel Marketplace" by default. Open question:
+do we need a true escrow layer (e.g., for chapter-launch pre-pay scenarios,
+or for refund-on-failed-launch member protection)? Most networking orgs
+use plain Stripe + a clear refund policy. Escrow only adds value if we're
+doing committed pre-launch fundraising. Default: Stripe. Reconsider if
+membership pricing strategy includes pre-launch chapter cohort funding.
+
+### Lead pipeline as a first-class CRM view (Slice 2 Helm)
+The `people` + `interactions` data already supports this; what's needed
+is the UI: kanban-style board showing prospect → discovery call →
+applicant → paid → active, with filters by source (chamber, referral,
+web, event) and chapter assignment. Replaces a HubSpot/Salesforce setup
+for Ben's day-to-day. Should be the *default* Helm landing screen.
+
+---
+
 ## Affinity sub-groups — rollerblading, embodied movement, journey circles
 
 **Idea:** Beyond traditional networking meetings, the tribe should host
