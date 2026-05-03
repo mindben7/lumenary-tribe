@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { scaleTime } from 'd3-scale';
 import { assignTracks, TimelineEvent } from '@/utils/timelineLogic';
 
-// Sample Data derived from the Slice 1 Launch Sequence, but with explicit start/end dates for the overlap algorithm
 const sampleData: TimelineEvent[] = [
   { id: "1", title: "Founder Pitch", start: new Date("2026-05-04"), end: new Date("2026-05-05"), description: "Presenting Slice 1 Research Binder to founding team." },
   { id: "2", title: "Brickell Pre-Marketing", start: new Date("2026-05-15"), end: new Date("2026-07-01"), description: "Activating warm channels: BNI, Rotary, Founders." },
@@ -17,26 +16,32 @@ const sampleData: TimelineEvent[] = [
 ];
 
 export const TimelineCanvas = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
   
-  // Calculate vertical track assignments automatically to prevent overlap
   const events = useMemo(() => assignTracks(sampleData), []);
 
-  // Map Time to X-Axis Pixels
-  const timeScale = scaleTime()
-    .domain([new Date("2026-04-01"), new Date("2027-12-01")])
-    .range([100, 3900]); // Total scrollable canvas width (4000px)
+  const timeScale = useMemo(() => {
+    return scaleTime()
+      .domain([new Date("2026-04-01"), new Date("2027-12-01")])
+      .range([100, 3900]);
+  }, []);
     
-  const TRACK_HEIGHT = 100; // Pixels between vertical branches
+  const TRACK_HEIGHT = 100;
 
-  // Escape key listener for modal dismissal
   useEffect(() => {
+    setIsMounted(true);
+    
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setSelectedEvent(null);
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  if (!isMounted) {
+    return <div className="w-full h-full bg-slate-900 flex items-center justify-center text-slate-500">Initializing Chronos Engine...</div>;
+  }
 
   return (
     <div className="relative w-full h-full bg-slate-900 overflow-hidden font-sans text-white">
@@ -46,7 +51,7 @@ export const TimelineCanvas = () => {
         className="absolute top-1/2 left-0 w-[4000px] h-[800px] -translate-y-1/2 cursor-grab active:cursor-grabbing"
         drag="x"
         dragConstraints={{ left: -3000, right: 0 }}
-        dragTransition={{ bounceStiffness: 400, bounceDamping: 25 }} // Physics-based inertia friction
+        dragTransition={{ bounceStiffness: 400, bounceDamping: 25 }}
       >
         {/* X-Axis Center Trunk Line */}
         <div className="absolute w-full h-1 bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-amber-500/50 top-1/2 -translate-y-1/2 shadow-[0_0_20px_rgba(59,130,246,0.3)] rounded-full" />
@@ -58,12 +63,11 @@ export const TimelineCanvas = () => {
             const yCenter = 400; // Half of our 800px wrapper height
             const yNode = yCenter + ((event.track || 0) * TRACK_HEIGHT);
             
-            // Draw a smooth bezier curve from the center line to the node
             return (
               <path
                 key={`line-${event.id}`}
                 d={`M ${xPos} ${yCenter} Q ${xPos} ${yNode}, ${xPos + 20} ${yNode}`}
-                stroke="rgba(148, 163, 184, 0.3)" // slate-400 with opacity
+                stroke="rgba(148, 163, 184, 0.3)"
                 strokeWidth="2"
                 fill="none"
               />
@@ -85,8 +89,8 @@ export const TimelineCanvas = () => {
               className="absolute h-12 bg-slate-800/90 backdrop-blur-md border border-slate-600 rounded-full flex items-center px-4 cursor-pointer hover:border-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:bg-slate-700 transition-colors z-10"
               style={{
                 left: xPos,
-                width: Math.max(width, 180), // Ensures very short events still look like clickable pills
-                top: `calc(50% - 24px + ${yPos}px)`, // Center vertically around its track line
+                width: Math.max(width, 180),
+                top: `calc(50% - 24px + ${yPos}px)`,
               }}
             >
               <motion.span layoutId={`event-title-${event.id}`} className="text-sm text-slate-100 font-semibold truncate pointer-events-none">
@@ -101,14 +105,12 @@ export const TimelineCanvas = () => {
       <AnimatePresence>
         {selectedEvent && (
           <>
-            {/* Background Blur Overlay */}
             <motion.div 
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} 
               onClick={() => setSelectedEvent(null)}
               className="absolute inset-0 bg-black/50 backdrop-blur-sm z-40 cursor-pointer"
             />
             
-            {/* The Morphing Card */}
             <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
               <motion.div
                 layoutId={`event-container-${selectedEvent.id}`}
@@ -118,7 +120,6 @@ export const TimelineCanvas = () => {
                   {selectedEvent.title}
                 </motion.h2>
                 
-                {/* Content fades in AFTER the layout morph finishes to avoid layout jank during animation */}
                 <motion.div 
                   initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ delay: 0.15 }}
                   className="flex flex-col h-full mt-4"
