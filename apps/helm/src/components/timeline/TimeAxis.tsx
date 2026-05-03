@@ -1,18 +1,25 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useReactFlow } from 'reactflow';
 import { useTimelineStore } from '@/store/useTimelineStore';
 
 export const TimeAxis = () => {
   const { getViewport } = useReactFlow();
-  const { zoomLevel, xToDate } = useTimelineStore();
+  const { xToDate } = useTimelineStore();
+  const [windowWidth, setWindowWidth] = useState(1200);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // Calculate bounds based on viewport
   const viewport = getViewport();
   
   // Simple heuristic: draw a tick every 500px on the screen
-  const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
   const numTicks = Math.floor(windowWidth / 200);
   
   const ticks = [];

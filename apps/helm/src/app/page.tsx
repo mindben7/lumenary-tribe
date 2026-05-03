@@ -1,4 +1,3 @@
-import { SignedIn, UserButton } from "@clerk/nextjs";
 import { TimelineCanvas } from "@/components/timeline/TimelineCanvas";
 
 export default function Home() {
@@ -10,9 +9,7 @@ export default function Home() {
           <code className="font-bold">apps/helm</code>
         </p>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <SignedIn>
-            <UserButton afterSignOutUrl="/" />
-          </SignedIn>
+          {/* Auth removed temporarily to prevent Vercel 500 error */}
         </div>
       </div>
 
