@@ -9,6 +9,7 @@ import {
   applyNodeChanges, 
   applyEdgeChanges 
 } from 'reactflow';
+import { MOCK_NODES, MOCK_EDGES, MOCK_ANCHOR_DATE, MOCK_LANES } from '../data/mockLaunchSequence';
 
 export type TimelineEventNode = Node & {
   data: {
@@ -47,11 +48,11 @@ interface TimelineState {
 }
 
 export const useTimelineStore = create<TimelineState>((set, get) => ({
-  nodes: [],
-  edges: [],
+  nodes: MOCK_NODES,
+  edges: MOCK_EDGES,
   zoomLevel: 10, // 10px per hour
-  anchorDate: new Date(),
-  activeLanes: [],
+  anchorDate: MOCK_ANCHOR_DATE,
+  activeLanes: MOCK_LANES.map(l => l.id),
 
   onNodesChange: (changes) => {
     set({
