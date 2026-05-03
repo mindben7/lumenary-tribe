@@ -1,92 +1,62 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
-import ReactFlow, { 
-  Background, 
-  Controls, 
-  Panel,
-  useReactFlow,
-  ReactFlowProvider,
-  NodeTypes,
-} from 'reactflow';
-import 'reactflow/dist/style.css';
-import { useTimelineStore } from '@/store/useTimelineStore';
-import { IngestionPanel } from './IngestionPanel';
-import { ChronosNode } from './ChronosNode';
-import { TimeAxis } from './TimeAxis';
-import { MOCK_NODES, MOCK_EDGES } from '@/data/mockLaunchSequence';
+import React, { useEffect, useRef, useState } from 'react';
+import { timelineData } from '@/data/timelineJsData';
 
-const nodeTypes: NodeTypes = {
-  chronos: ChronosNode,
-};
+// Extend window object to recognize TimelineJS
+declare global {
+  interface Window {
+    TL?: {
+      Timeline: any;
+    };
+  }
+}
 
-const TimelineCanvasInner = () => {
-  const { 
-    nodes, 
-    edges, 
-    onNodesChange, 
-    onEdgesChange, 
-    onConnect,
-    setNodes,
-    setEdges
-  } = useTimelineStore();
-  
-  const { setViewport, getViewport } = useReactFlow();
-  const [isMounted, setIsMounted] = useState(false);
+export const TimelineCanvas = () => {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const [isReady, setIsReady] = useState(false);
 
-  // Initialize nodes/edges only on mount to prevent hydration mismatch
   useEffect(() => {
-    setIsMounted(true);
-    if (nodes.length === 0) {
-      setNodes(MOCK_NODES);
-      setEdges(MOCK_EDGES);
-    }
-  }, []);
-  
-  const handleWheel = useCallback((event: React.WheelEvent) => {
-    if (!event.shiftKey) {
-      const { x, y, zoom } = getViewport();
-      setViewport({ x: x - event.deltaY, y, zoom }, { duration: 0 });
-    }
-  }, [getViewport, setViewport]);
+    // 1. Load Knight Lab CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css';
+    document.head.appendChild(link);
 
-  if (!isMounted) return <div className="w-full h-full bg-gray-50 flex items-center justify-center text-zinc-400">Loading Chronos...</div>;
+    // 2. Load Knight Lab JS
+    const script = document.createElement('script');
+    script.src = 'https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js';
+    script.async = true;
+    script.onload = () => setIsReady(true);
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup to prevent duplicate injections on re-renders
+      document.head.removeChild(link);
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isReady && timelineRef.current && window.TL) {
+      // Initialize TimelineJS
+      new window.TL.Timeline(timelineRef.current, timelineData, {
+        hash_bookmark: false,
+        initial_zoom: 2,
+        timenav_position: 'bottom',
+      });
+    }
+  }, [isReady]);
 
   return (
-    <div className="w-full h-full relative overflow-hidden" onWheel={handleWheel}>
-      <TimeAxis />
-      
-      {/* Central Visual Axis (The "SoundCloud" Line) */}
-      <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-amber-500 -translate-y-1/2 z-0 opacity-50 pointer-events-none shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
-
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        nodeTypes={nodeTypes}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        fitView
-        minZoom={0.1}
-        maxZoom={2}
-      >
-        <Background gap={50} color="#f0f0f0" />
-        <Controls />
-        <Panel position="top-left" className="!top-12">
-          <IngestionPanel />
-        </Panel>
-        <Panel position="top-right" className="bg-white p-2 border rounded shadow-md !top-12 text-xs">
-          <b>Controls:</b><br/>
-          Scroll: Pan time<br/>
-          Drag node: Move in time
-        </Panel>
-      </ReactFlow>
+    <div className="w-full h-full relative bg-gray-50">
+      {!isReady && (
+        <div className="absolute inset-0 flex items-center justify-center text-zinc-400 z-10">
+          Loading Knight Lab TimelineJS...
+        </div>
+      )}
+      {/* TimelineJS requires a container with explicit dimensions, usually 100% width/height */}
+      <div ref={timelineRef} className="w-full h-full" id="timeline-embed" />
     </div>
   );
 };
-
-export const TimelineCanvas = () => (
-  <ReactFlowProvider>
-    <TimelineCanvasInner />
-  </ReactFlowProvider>
-);
