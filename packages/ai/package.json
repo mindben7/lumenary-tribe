@@ -9,6 +9,10 @@
     "typescript": "^5.4.0"
   },
   "dependencies": {
-    "@google/genai": "^1.51.0"
+    "@ai-sdk/anthropic": "^3.0.74",
+    "@ai-sdk/google": "^3.0.67",
+    "@ai-sdk/openai": "^3.0.58",
+    "ai": "^6.0.174",
+    "zod": "^4.4.2"
   }
 }
