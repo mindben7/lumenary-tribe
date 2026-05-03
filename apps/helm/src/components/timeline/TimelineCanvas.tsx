@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import ReactFlow, { 
   Background, 
   Controls, 
   Panel,
   useReactFlow,
   ReactFlowProvider,
-  NodeTypes
+  NodeTypes,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { useTimelineStore } from '@/store/useTimelineStore';
@@ -15,6 +15,7 @@ import { IngestionPanel } from './IngestionPanel';
 import { ChronosNode } from './ChronosNode';
 import { TimeAxis } from './TimeAxis';
 import { LaneBackgrounds } from './LaneBackgrounds';
+import { MOCK_NODES, MOCK_EDGES } from '@/data/mockLaunchSequence';
 
 const nodeTypes: NodeTypes = {
   chronos: ChronosNode,
@@ -27,19 +28,30 @@ const TimelineCanvasInner = () => {
     onNodesChange, 
     onEdgesChange, 
     onConnect,
-    zoomLevel
+    setNodes,
+    setEdges
   } = useTimelineStore();
   
   const { setViewport, getViewport } = useReactFlow();
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Initialize nodes/edges only on mount to prevent hydration mismatch
+  useEffect(() => {
+    setIsMounted(true);
+    if (nodes.length === 0) {
+      setNodes(MOCK_NODES);
+      setEdges(MOCK_EDGES);
+    }
+  }, []);
   
   const handleWheel = useCallback((event: React.WheelEvent) => {
-    // Only scroll horizontally if not holding Shift
     if (!event.shiftKey) {
       const { x, y, zoom } = getViewport();
-      // Translate Y delta to X translation
       setViewport({ x: x - event.deltaY, y, zoom }, { duration: 0 });
     }
   }, [getViewport, setViewport]);
+
+  if (!isMounted) return <div className="w-full h-full bg-gray-50 flex items-center justify-center text-zinc-400">Loading Chronos...</div>;
 
   return (
     <div className="w-full h-full relative overflow-hidden" onWheel={handleWheel}>
@@ -53,6 +65,8 @@ const TimelineCanvasInner = () => {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         fitView
+        minZoom={0.1}
+        maxZoom={2}
       >
         <Background gap={50} color="#f0f0f0" />
         <Controls />

@@ -1,25 +1,37 @@
 'use client';
 
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { Handle, Position, NodeProps } from 'reactflow';
 import { TimelineEventNode } from '@/store/useTimelineStore';
 
-// Assuming 50px per day roughly matches our initial mock scaling
 const pxPerDay = 50; 
 
 export const ChronosNode = memo(({ data, selected }: NodeProps<TimelineEventNode['data']>) => {
   const isPhase = data.type === 'phase';
-  const isMilestone = data.type === 'milestone';
+  
+  const { startDate, endDate, label, type, isAiExtracted, confidence } = data;
 
-  // Calculate width for phases that span time
-  let dynamicWidth = 'auto';
-  if (isPhase && data.endDate && data.startDate) {
-    const start = new Date(data.startDate);
-    const end = new Date(data.endDate);
-    const diffDays = (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24);
-    // Minimum 150px width so labels are readable
-    dynamicWidth = `${Math.max(150, diffDays * pxPerDay)}px`;
-  }
+  // Use useMemo for safer date parsing and width calculation
+  const { dynamicWidth, formattedStart, formattedEnd } = useMemo(() => {
+    const start = new Date(startDate);
+    const end = endDate ? new Date(endDate) : null;
+    
+    let width = 'auto';
+    if (isPhase && start && end && !isNaN(start.getTime()) && !isNaN(end.getTime())) {
+      const diffDays = (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24);
+      width = `${Math.max(150, diffDays * pxPerDay)}px`;
+    }
+
+    const fs = !isNaN(start.getTime()) 
+      ? start.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })
+      : 'Invalid Date';
+    
+    const fe = end && !isNaN(end.getTime())
+      ? end.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })
+      : null;
+
+    return { dynamicWidth: width, formattedStart: fs, formattedEnd: fe };
+  }, [startDate, endDate, isPhase]);
 
   return (
     <div 
@@ -32,22 +44,22 @@ export const ChronosNode = memo(({ data, selected }: NodeProps<TimelineEventNode
     >
       <div className="flex items-center justify-between gap-2 border-b border-zinc-100 pb-1">
         <span className={`text-[10px] font-bold uppercase tracking-wider ${isPhase ? 'text-blue-500' : 'text-amber-600'}`}>
-          {data.type}
+          {type}
         </span>
-        {data.isAiExtracted && (
-          <span className="text-[10px] bg-purple-100/50 text-purple-700 px-1.5 py-0.5 rounded flex items-center gap-1 font-mono" title={`AI Extracted Confidence: ${data.confidence}%`}>
-            ✧ {data.confidence}%
+        {isAiExtracted && (
+          <span className="text-[10px] bg-purple-100/50 text-purple-700 px-1.5 py-0.5 rounded flex items-center gap-1 font-mono" title={`AI Extracted Confidence: ${confidence}%`}>
+            ✧ {confidence}%
           </span>
         )}
       </div>
       
       <div className="text-sm font-semibold text-zinc-800 break-words leading-tight mt-1">
-        {data.label}
+        {label}
       </div>
       
       <div className="text-[10px] text-zinc-400 font-mono mt-1">
-        {new Date(data.startDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
-        {data.endDate && ` → ${new Date(data.endDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}`}
+        {formattedStart}
+        {formattedEnd && ` → ${formattedEnd}`}
       </div>
 
       <Handle type="target" position={Position.Left} className="w-2 h-2 !bg-zinc-400 border-none" />

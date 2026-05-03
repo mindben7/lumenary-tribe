@@ -86,16 +86,19 @@ export const useTimelineStore = create<TimelineState>((set, get) => ({
     });
   },
 
-  dateToX: (date: Date) => {
+  dateToX: (date: Date | string) => {
     const { anchorDate, zoomLevel } = get();
-    const diffInHours = (date.getTime() - anchorDate.getTime()) / (1000 * 60 * 60);
+    const d = typeof date === 'string' ? new Date(date) : date;
+    if (isNaN(d.getTime())) return 0;
+    const diffInHours = (d.getTime() - anchorDate.getTime()) / (1000 * 60 * 60);
     return diffInHours * zoomLevel;
   },
 
   xToDate: (x: number) => {
     const { anchorDate, zoomLevel } = get();
     const diffInHours = x / zoomLevel;
-    return new Date(anchorDate.getTime() + diffInHours * 1000 * 60 * 60);
+    const d = new Date(anchorDate.getTime() + diffInHours * 1000 * 60 * 60);
+    return d;
   },
 
   scrollTime: (deltaX: number) => {
