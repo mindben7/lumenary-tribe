@@ -1,21 +1,28 @@
 ---
-title: Monday Research Binder — Evidence Pack for Founder Pitch
+title: Research Binder — Evidence Pack for Founder Pitch
 date: 2026-05-03
-deadline: 2026-05-04 (Monday)
+deadline: 2026-05-10 (Sunday night) — revised from original Monday deadline
 status: approved (design pending Ben sign-off); execution to follow
 parent: docs/superpowers/specs/2026-05-03-slice-1-founder-proposal-design.md
 mode: pair-research (Ben drives login-walled sources; AI synthesizes public + paid)
 audience: primary = Ben (mastery / armed-for-meeting); secondary = founders (leave-behind appendix later)
 ---
 
-# Monday Research Binder Design
+# Research Binder Design
 
 This document specifies the research deliverable Ben needs in hand by
-Monday 2026-05-04. The binder serves two purposes in sequence: first, it
+Sunday 2026-05-10. The binder serves two purposes in sequence: first, it
 is Ben's personal mastery document — he must be able to quote any stat
 from memory in a founder conversation. Second, it becomes the appendix /
 evidence pack inside the Engagement Proposal (Slice 1) when that draft is
 written.
+
+**Timeline note:** original deadline was Monday 2026-05-04 (12-hour
+sprint). Revised to Sunday 2026-05-10 (7 days). The relaxed timeline
+makes a formal implementation plan worthwhile (vs. the "just rip it"
+approach a 12-hour sprint required) and opens room for primary-source
+additions like a BNI chapter visit or 1–3 expert calls if Ben wants
+them — see §5b below.
 
 ## 1. Purpose and audience priority
 
@@ -171,6 +178,23 @@ affinity groups as soft-entry funnels into paid membership; 2 pages
 If specific subscriptions don't pencil out (no trial available, content
 isn't actually useful for our questions), we drop them and lean harder on
 free + Ben's pair-research time.
+
+### §5b. Primary-source additions (optional, enabled by extended timeline)
+
+These add real depth but cost Ben time, not money. Decide per item.
+
+| Source | Time cost | Use |
+|---|---|---|
+| Visit one BNI chapter as a guest | 2 hr (incl. travel) | D2 firsthand category-rule observation |
+| Visit one ProVisors meeting as a guest | 2 hr | D2 looser-model comparison firsthand |
+| 1–3 phone calls with networking-org leaders Ben can warm-intro to | 30–45 min each | D5 + D6 — anything not in public sources |
+| Coffee with a former BNI director (if reachable in S. FL) | 1 hr | D2 + D3 — internal economics nobody publishes |
+| Skim Ben's own footage from the 4 meetings he's already filmed | 1–2 hr | D6 + Synthesis — captures the actual tribe's tone, member archetype, current dynamics |
+
+Recommended: **at minimum** do the BNI visit and the footage skim. Both
+are high-leverage and the BNI visit also doubles as competitive
+intelligence Ben can quote firsthand ("when I sat in on the Doral
+chapter last week..." carries weight no citation matches).
 
 ## 6. Binder structure (reading order)
 
